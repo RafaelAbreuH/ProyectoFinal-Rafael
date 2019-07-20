@@ -16,5 +16,10 @@ namespace ProyectoFinal_Rafael.UI.Registros
         {
             InitializeComponent();
         }
+
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
