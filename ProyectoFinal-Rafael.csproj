@@ -76,11 +76,23 @@
     <Compile Include="UI\Consultas\cUsuarios.Designer.cs">
       <DependentUpon>cUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\rArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rArticulos.Designer.cs">
+      <DependentUpon>rArticulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rCiudad.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Registros\rCiudad.Designer.cs">
       <DependentUpon>rCiudad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rClientes.Designer.cs">
+      <DependentUpon>rClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\rEntradaAlmacen.cs">
       <SubType>Form</SubType>
@@ -113,8 +125,14 @@
     <EmbeddedResource Include="UI\Consultas\cUsuarios.resx">
       <DependentUpon>cUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rArticulos.resx">
+      <DependentUpon>rArticulos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rCiudad.resx">
       <DependentUpon>rCiudad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rClientes.resx">
+      <DependentUpon>rClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rEntradaAlmacen.resx">
       <DependentUpon>rEntradaAlmacen.cs</DependentUpon>
