@@ -100,6 +100,12 @@
     <Compile Include="UI\Registros\rEntradaAlmacen.Designer.cs">
       <DependentUpon>rEntradaAlmacen.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\rFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rFacturacion.Designer.cs">
+      <DependentUpon>rFacturacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rEntradaAlmacen.resx">
       <DependentUpon>rEntradaAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rFacturacion.resx">
+      <DependentUpon>rFacturacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rUsuarios.resx">
       <DependentUpon>rUsuarios.cs</DependentUpon>
