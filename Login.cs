@@ -28,7 +28,7 @@ namespace ProyectoFinal_Rafael
 
         private void Entrarbutton_Click(object sender, EventArgs e)
         {
-            int paso = 0;
+            bool paso = true;
             Expression<Func<Usuarios, bool>> filtrar = x => true;
             List<Usuarios> user = new List<Usuarios>();
             RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
@@ -36,17 +36,17 @@ namespace ProyectoFinal_Rafael
             CleanProvider();
             if (UsuarioTextBox.Text == string.Empty)
             {
-                paso = 1;
+                paso = false;
                 errorProvider.SetError(UsuarioTextBox, "Incorrecto");
 
             }
             if (ClavemaskedTextBox.Text == string.Empty)
             {
-                paso = 1;
+                paso = false;
                 errorProvider.SetError(ClavemaskedTextBox, "Incorrecto");
 
             }
-            if (paso == 1)
+            if (paso == false)
             {
                 MessageBox.Show("Campos Vacios!!");
                 return;
@@ -77,10 +77,6 @@ namespace ProyectoFinal_Rafael
             }
         }
 
-        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            ClavemaskedTextBox.PasswordChar = MostrarcheckBox1.Checked ? '\0' : '*';
-        }
     }
 }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
@@ -43,13 +44,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.CedulamaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CiudadcomboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Agregarbutton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Eliminarbutton
@@ -63,6 +66,7 @@
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Guardarbutton
             // 
@@ -75,6 +79,7 @@
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Nuevobutton
             // 
@@ -87,6 +92,7 @@
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Buscarbutton
             // 
@@ -193,13 +199,13 @@
             this.label4.TabIndex = 59;
             this.label4.Text = "Telefono:";
             // 
-            // maskedTextBox1
+            // TelefonomaskedTextBox
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(63, 120);
-            this.maskedTextBox1.Mask = "(___)-___-____";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(158, 20);
-            this.maskedTextBox1.TabIndex = 60;
+            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(63, 120);
+            this.TelefonomaskedTextBox.Mask = "(___)-___-____";
+            this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
+            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(158, 20);
+            this.TelefonomaskedTextBox.TabIndex = 60;
             // 
             // label6
             // 
@@ -210,13 +216,14 @@
             this.label6.TabIndex = 61;
             this.label6.Text = "Ciudad:";
             // 
-            // comboBox1
+            // CiudadcomboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(63, 146);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(158, 21);
-            this.comboBox1.TabIndex = 62;
+            this.CiudadcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CiudadcomboBox.FormattingEnabled = true;
+            this.CiudadcomboBox.Location = new System.Drawing.Point(63, 146);
+            this.CiudadcomboBox.Name = "CiudadcomboBox";
+            this.CiudadcomboBox.Size = new System.Drawing.Size(158, 21);
+            this.CiudadcomboBox.TabIndex = 62;
             // 
             // label8
             // 
@@ -235,27 +242,32 @@
             this.textBox1.Size = new System.Drawing.Size(106, 20);
             this.textBox1.TabIndex = 64;
             // 
-            // button1
+            // Agregarbutton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(227, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 23);
-            this.button1.TabIndex = 65;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Agregarbutton.Location = new System.Drawing.Point(227, 144);
+            this.Agregarbutton.Name = "Agregarbutton";
+            this.Agregarbutton.Size = new System.Drawing.Size(25, 23);
+            this.Agregarbutton.TabIndex = 65;
+            this.Agregarbutton.Text = "+";
+            this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // rClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(258, 314);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Agregarbutton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CiudadcomboBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.TelefonomaskedTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.CedulamaskedTextBox1);
             this.Controls.Add(this.Eliminarbutton);
@@ -274,6 +286,7 @@
             this.Name = "rClientes";
             this.Text = "Registro Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,11 +309,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox CedulamaskedTextBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox TelefonomaskedTextBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CiudadcomboBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Agregarbutton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
