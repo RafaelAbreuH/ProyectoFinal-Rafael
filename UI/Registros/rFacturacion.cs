@@ -304,7 +304,7 @@ namespace ProyectoFinal_Rafael.UI.Registros
         {
             Factura factura;
             bool Paso = false;
-            RepositorioBase<Factura> repositorio = new RepositorioBase<Factura>();
+            RepositorioFactura repositorio = new RepositorioFactura();
             if (HayErrores())
             {
                 MessageBox.Show("Favor revisar todos los campos!!", "Validación!!",
@@ -316,9 +316,19 @@ namespace ProyectoFinal_Rafael.UI.Registros
 
             if (IdnumericUpDown.Value == 0)
             {
-                Paso = repositorio.Guardar(factura);
-                MessageBox.Show("Guardado!!", "Exito",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                int num = Convert.ToInt32(TipoPagocomboBox.SelectedIndex);
+                if (num == 0)
+                {
+                    Paso = repositorio.GuardarNormal(factura);
+                    MessageBox.Show("Guardado!!", "Exito",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (num == 1)
+                {
+                    Paso = repositorio.Guardar(factura);
+                    MessageBox.Show("Guardado!!", "Exito",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
@@ -354,10 +364,22 @@ namespace ProyectoFinal_Rafael.UI.Registros
 
             if (factura != null)
             {
-                if (repositorio.Eliminar(id))
+                if (factura.TipoPago == "Contado")
                 {
-                    MessageBox.Show("Eliminado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Limpiar();
+                    if (repositorio.Eliminar(id))
+                    {
+                        MessageBox.Show("Eliminado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                }
+                else if (factura.TipoPago == "Credito")
+                {
+                    RepositorioFactura repo = new RepositorioFactura();
+                    if (repo.Eliminar(id))
+                    {
+                        MessageBox.Show("Eliminado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
                 }
                 else
                     MessageBox.Show("No se pudo eliminar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);

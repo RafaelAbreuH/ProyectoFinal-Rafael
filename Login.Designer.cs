@@ -51,7 +51,7 @@
             this.Entrarbutton.Location = new System.Drawing.Point(93, 111);
             this.Entrarbutton.Name = "Entrarbutton";
             this.Entrarbutton.Size = new System.Drawing.Size(75, 23);
-            this.Entrarbutton.TabIndex = 3;
+            this.Entrarbutton.TabIndex = 4;
             this.Entrarbutton.Text = "Entrar";
             this.Entrarbutton.UseVisualStyleBackColor = true;
             this.Entrarbutton.Click += new System.EventHandler(this.Entrarbutton_Click);
