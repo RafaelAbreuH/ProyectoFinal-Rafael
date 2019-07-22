@@ -110,6 +110,7 @@
             this.FiltrocomboBox.Items.AddRange(new object[] {
             "Todo",
             "ID",
+            "Nombre",
             "Costo",
             "Precio",
             "Existencia",
