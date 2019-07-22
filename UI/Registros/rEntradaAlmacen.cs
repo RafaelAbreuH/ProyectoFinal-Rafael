@@ -26,13 +26,15 @@ namespace ProyectoFinal_Rafael.UI.Registros
             IdnumericUpDown.Value = 0;
             ArticulocomboBox.Text = String.Empty;
             CantidadtextBox.Text = String.Empty;
+            FechadateTimePicker.Value = DateTime.Now;
         }
 
         private void LlenarCampos(EntradaAlmacen entrada)
         {
             IdnumericUpDown.Value = entrada.EntradaId;
             ArticulocomboBox.Text = entrada.ArticuloId.ToString();
-            CantidadtextBox.Text = entrada.Cantidad.ToString();            
+            CantidadtextBox.Text = entrada.Cantidad.ToString();
+            FechadateTimePicker.Value = entrada.FechaEntrada;
         }
 
         private EntradaAlmacen LlenarClase()
@@ -42,6 +44,7 @@ namespace ProyectoFinal_Rafael.UI.Registros
             entrada.EntradaId = (int)IdnumericUpDown.Value;
             entrada.ArticuloId = Convert.ToInt32(ArticulocomboBox.SelectedValue);
             entrada.Cantidad = Convert.ToDecimal(CantidadtextBox.Text);
+            entrada.FechaEntrada = FechadateTimePicker.Value;
             return entrada;
         }
 
@@ -60,6 +63,11 @@ namespace ProyectoFinal_Rafael.UI.Registros
             if (CantidadtextBox.Text == String.Empty)
             {
                 errorProvider.SetError(CantidadtextBox, "Digite una Cantidad");
+                paso = false;
+            }
+            if (FechadateTimePicker.Value > DateTime.Now)
+            {
+                errorProvider.SetError(FechadateTimePicker, "La fecha no puede ser Mayor que la de hoy");
                 paso = false;
             }
             return paso;
