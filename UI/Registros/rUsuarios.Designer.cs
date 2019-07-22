@@ -54,12 +54,13 @@
             // 
             // FechadateTimePicker
             // 
-            this.FechadateTimePicker.CustomFormat = "dd/mm/yyy";
+            this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(104, 233);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(127, 20);
             this.FechadateTimePicker.TabIndex = 35;
+            this.FechadateTimePicker.Value = new System.DateTime(2019, 7, 1, 0, 0, 0, 0);
             // 
             // ConfirmarmaskedTextBox
             // 

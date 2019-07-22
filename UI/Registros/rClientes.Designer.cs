@@ -42,15 +42,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.CedulamaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.CiudadcomboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BalancetextBox = new System.Windows.Forms.TextBox();
             this.Agregarbutton = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CedulamaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -109,7 +109,7 @@
             // 
             // FechadateTimePicker
             // 
-            this.FechadateTimePicker.CustomFormat = "dd/mm/yyy";
+            this.FechadateTimePicker.CustomFormat = "dd/MM/yyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(84, 173);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
@@ -182,14 +182,6 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "ID:";
             // 
-            // CedulamaskedTextBox1
-            // 
-            this.CedulamaskedTextBox1.Location = new System.Drawing.Point(63, 69);
-            this.CedulamaskedTextBox1.Mask = "___-_______-_";
-            this.CedulamaskedTextBox1.Name = "CedulamaskedTextBox1";
-            this.CedulamaskedTextBox1.Size = new System.Drawing.Size(158, 20);
-            this.CedulamaskedTextBox1.TabIndex = 58;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -202,7 +194,7 @@
             // TelefonomaskedTextBox
             // 
             this.TelefonomaskedTextBox.Location = new System.Drawing.Point(63, 120);
-            this.TelefonomaskedTextBox.Mask = "(___)-___-____";
+            this.TelefonomaskedTextBox.Mask = "000-000-0000";
             this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
             this.TelefonomaskedTextBox.Size = new System.Drawing.Size(158, 20);
             this.TelefonomaskedTextBox.TabIndex = 60;
@@ -234,13 +226,13 @@
             this.label8.TabIndex = 63;
             this.label8.Text = "Balance:";
             // 
-            // textBox1
+            // BalancetextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 210);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(106, 20);
-            this.textBox1.TabIndex = 64;
+            this.BalancetextBox.Location = new System.Drawing.Point(84, 210);
+            this.BalancetextBox.Name = "BalancetextBox";
+            this.BalancetextBox.ReadOnly = true;
+            this.BalancetextBox.Size = new System.Drawing.Size(106, 20);
+            this.BalancetextBox.TabIndex = 64;
             // 
             // Agregarbutton
             // 
@@ -257,19 +249,27 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // CedulamaskedTextBox1
+            // 
+            this.CedulamaskedTextBox1.Location = new System.Drawing.Point(61, 69);
+            this.CedulamaskedTextBox1.Mask = "000-0000000-0";
+            this.CedulamaskedTextBox1.Name = "CedulamaskedTextBox1";
+            this.CedulamaskedTextBox1.Size = new System.Drawing.Size(160, 20);
+            this.CedulamaskedTextBox1.TabIndex = 66;
+            // 
             // rClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(258, 314);
+            this.Controls.Add(this.CedulamaskedTextBox1);
             this.Controls.Add(this.Agregarbutton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BalancetextBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.CiudadcomboBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TelefonomaskedTextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.CedulamaskedTextBox1);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -307,14 +307,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox CedulamaskedTextBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox TelefonomaskedTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox CiudadcomboBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox BalancetextBox;
         private System.Windows.Forms.Button Agregarbutton;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.MaskedTextBox CedulamaskedTextBox1;
     }
 }

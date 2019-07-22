@@ -40,6 +40,7 @@ namespace ProyectoFinal_Rafael.UI.Registros
             TelefonomaskedTextBox.Text = string.Empty;
             CiudadcomboBox.Text = String.Empty;
             FechadateTimePicker.Value = DateTime.Now;
+            BalancetextBox.Text = string.Empty;
         }
 
         private void LlenarCampos(Clientes cliente)
@@ -51,6 +52,7 @@ namespace ProyectoFinal_Rafael.UI.Registros
             TelefonomaskedTextBox.Text = cliente.Celular;
             CiudadcomboBox.Text = cliente.CiudadId.ToString();
             FechadateTimePicker.Value = cliente.FechaIngreso;
+            BalancetextBox.Text = cliente.Balance.ToString();
         }
 
         private Clientes LlenarClase()
@@ -64,6 +66,7 @@ namespace ProyectoFinal_Rafael.UI.Registros
             cliente.Celular = TelefonomaskedTextBox.Text;
             cliente.CiudadId = Convert.ToInt32(CiudadcomboBox.Text);
             cliente.FechaIngreso = FechadateTimePicker.Value;
+            cliente.Balance = Convert.ToDecimal(BalancetextBox.Text);
 
             return cliente; 
         }
@@ -73,6 +76,34 @@ namespace ProyectoFinal_Rafael.UI.Registros
             RepositorioBase<Clientes> db = new RepositorioBase<Clientes>();
             Clientes clientes = db.Buscar((int)IdnumericUpDown.Value);
             return (clientes != null);
+        }
+
+        public void soloNumeros(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsNumber(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+
+                    e.Handled = false;
+                }
+                else if (Char.IsPunctuation(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private bool Validar()
@@ -195,5 +226,7 @@ namespace ProyectoFinal_Rafael.UI.Registros
                 MessageBox.Show("No se pudo eliminar", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }

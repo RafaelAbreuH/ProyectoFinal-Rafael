@@ -93,6 +93,7 @@
             this.CantidadtextBox.Name = "CantidadtextBox";
             this.CantidadtextBox.Size = new System.Drawing.Size(94, 20);
             this.CantidadtextBox.TabIndex = 41;
+            this.CantidadtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadtextBox_KeyPress);
             // 
             // Eliminarbutton
             // 

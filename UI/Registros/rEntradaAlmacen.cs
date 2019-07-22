@@ -159,5 +159,36 @@ namespace ProyectoFinal_Rafael.UI.Registros
                 MessageBox.Show("No fue posible guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
+        public void soloNumeros(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsNumber(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+
+                    e.Handled = false;
+                }
+                else if (Char.IsPunctuation(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+        private void CantidadtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumeros(e);
+        }
     }
 }
