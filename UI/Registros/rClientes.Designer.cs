@@ -216,6 +216,7 @@
             this.CiudadcomboBox.Name = "CiudadcomboBox";
             this.CiudadcomboBox.Size = new System.Drawing.Size(158, 21);
             this.CiudadcomboBox.TabIndex = 62;
+            this.CiudadcomboBox.Click += new System.EventHandler(this.CiudadcomboBox_Click);
             // 
             // label8
             // 

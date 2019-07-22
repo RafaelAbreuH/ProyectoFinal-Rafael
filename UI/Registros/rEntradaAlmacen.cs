@@ -80,7 +80,7 @@ namespace ProyectoFinal_Rafael.UI.Registros
             var listado = new List<Articulos>();
             listado = db.GetList(l => true);
             ArticulocomboBox.DataSource = listado;
-            ArticulocomboBox.DisplayMember = "Nombre";
+            ArticulocomboBox.DisplayMember = "Descripcion";
             ArticulocomboBox.ValueMember = "ArticuloId";
 
 
@@ -89,7 +89,7 @@ namespace ProyectoFinal_Rafael.UI.Registros
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<EntradaAlmacen> db = new RepositorioBase<EntradaAlmacen>();
+            RepositorioEntradaAlmacen db = new RepositorioEntradaAlmacen();
             errorProvider.Clear();
             try
             {
@@ -140,7 +140,7 @@ namespace ProyectoFinal_Rafael.UI.Registros
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<EntradaAlmacen> db = new RepositorioBase<EntradaAlmacen>();
+            RepositorioEntradaAlmacen db = new RepositorioEntradaAlmacen();
             EntradaAlmacen entrada = LlenarClase();
             bool paso = false;
 

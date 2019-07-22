@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.IdnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.Buscarbutton = new System.Windows.Forms.Button();
@@ -38,15 +39,17 @@
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.Venta = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ImportetextBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.TotaltextBox = new System.Windows.Forms.TextBox();
+            this.ItbistextBox = new System.Windows.Forms.TextBox();
+            this.SubTotaltextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.Removerbutton = new System.Windows.Forms.Button();
             this.Agregarbutton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DetalledataGridView = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.CantidadtextBox = new System.Windows.Forms.TextBox();
             this.PreciotextBox = new System.Windows.Forms.TextBox();
@@ -56,9 +59,11 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             this.Venta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // IdnumericUpDown
@@ -88,6 +93,7 @@
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // label2
             // 
@@ -148,55 +154,77 @@
             // 
             // Venta
             // 
-            this.Venta.Controls.Add(this.textBox3);
-            this.Venta.Controls.Add(this.textBox2);
-            this.Venta.Controls.Add(this.textBox1);
+            this.Venta.Controls.Add(this.ImportetextBox);
+            this.Venta.Controls.Add(this.label11);
+            this.Venta.Controls.Add(this.TotaltextBox);
+            this.Venta.Controls.Add(this.ItbistextBox);
+            this.Venta.Controls.Add(this.SubTotaltextBox);
             this.Venta.Controls.Add(this.label10);
             this.Venta.Controls.Add(this.label9);
             this.Venta.Controls.Add(this.label8);
             this.Venta.Controls.Add(this.Removerbutton);
             this.Venta.Controls.Add(this.Agregarbutton);
-            this.Venta.Controls.Add(this.dataGridView1);
+            this.Venta.Controls.Add(this.DetalledataGridView);
             this.Venta.Controls.Add(this.label6);
             this.Venta.Controls.Add(this.CantidadtextBox);
             this.Venta.Controls.Add(this.PreciotextBox);
             this.Venta.Controls.Add(this.label5);
             this.Venta.Controls.Add(this.ArticulocomboBox);
             this.Venta.Controls.Add(this.label4);
-            this.Venta.Location = new System.Drawing.Point(12, 83);
+            this.Venta.Location = new System.Drawing.Point(12, 68);
             this.Venta.Name = "Venta";
-            this.Venta.Size = new System.Drawing.Size(492, 389);
+            this.Venta.Size = new System.Drawing.Size(645, 408);
             this.Venta.TabIndex = 60;
             this.Venta.TabStop = false;
             // 
-            // textBox3
+            // ImportetextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(405, 362);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(80, 20);
-            this.textBox3.TabIndex = 72;
+            this.ImportetextBox.Location = new System.Drawing.Point(496, 13);
+            this.ImportetextBox.Name = "ImportetextBox";
+            this.ImportetextBox.ReadOnly = true;
+            this.ImportetextBox.Size = new System.Drawing.Size(76, 20);
+            this.ImportetextBox.TabIndex = 74;
             // 
-            // textBox2
+            // label11
             // 
-            this.textBox2.Location = new System.Drawing.Point(405, 336);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(80, 20);
-            this.textBox2.TabIndex = 71;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(445, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(45, 13);
+            this.label11.TabIndex = 73;
+            this.label11.Text = "Importe:";
             // 
-            // textBox1
+            // TotaltextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(405, 311);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(80, 20);
-            this.textBox1.TabIndex = 70;
+            this.TotaltextBox.Location = new System.Drawing.Point(552, 367);
+            this.TotaltextBox.MaxLength = 32767999;
+            this.TotaltextBox.Name = "TotaltextBox";
+            this.TotaltextBox.ReadOnly = true;
+            this.TotaltextBox.Size = new System.Drawing.Size(80, 20);
+            this.TotaltextBox.TabIndex = 72;
+            // 
+            // ItbistextBox
+            // 
+            this.ItbistextBox.Location = new System.Drawing.Point(552, 341);
+            this.ItbistextBox.MaxLength = 32767999;
+            this.ItbistextBox.Name = "ItbistextBox";
+            this.ItbistextBox.ReadOnly = true;
+            this.ItbistextBox.Size = new System.Drawing.Size(80, 20);
+            this.ItbistextBox.TabIndex = 71;
+            // 
+            // SubTotaltextBox
+            // 
+            this.SubTotaltextBox.Location = new System.Drawing.Point(552, 316);
+            this.SubTotaltextBox.MaxLength = 32767999;
+            this.SubTotaltextBox.Name = "SubTotaltextBox";
+            this.SubTotaltextBox.ReadOnly = true;
+            this.SubTotaltextBox.Size = new System.Drawing.Size(80, 20);
+            this.SubTotaltextBox.TabIndex = 70;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(365, 365);
+            this.label10.Location = new System.Drawing.Point(512, 370);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(34, 13);
             this.label10.TabIndex = 69;
@@ -205,7 +233,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(370, 339);
+            this.label9.Location = new System.Drawing.Point(517, 344);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(29, 13);
             this.label9.TabIndex = 68;
@@ -214,7 +242,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(346, 314);
+            this.label8.Location = new System.Drawing.Point(493, 319);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 67;
@@ -229,25 +257,27 @@
             this.Removerbutton.TabIndex = 61;
             this.Removerbutton.Text = "Eliminar Fila";
             this.Removerbutton.UseVisualStyleBackColor = true;
+            this.Removerbutton.Click += new System.EventHandler(this.Removerbutton_Click);
             // 
             // Agregarbutton
             // 
             this.Agregarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Agregarbutton.Location = new System.Drawing.Point(437, 12);
+            this.Agregarbutton.Location = new System.Drawing.Point(578, 11);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(48, 22);
             this.Agregarbutton.TabIndex = 61;
             this.Agregarbutton.Text = "+";
             this.Agregarbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
             // 
-            // dataGridView1
+            // DetalledataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 40);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(476, 268);
-            this.dataGridView1.TabIndex = 61;
+            this.DetalledataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetalledataGridView.Location = new System.Drawing.Point(9, 40);
+            this.DetalledataGridView.Name = "DetalledataGridView";
+            this.DetalledataGridView.Size = new System.Drawing.Size(623, 268);
+            this.DetalledataGridView.TabIndex = 61;
             // 
             // label6
             // 
@@ -264,6 +294,7 @@
             this.CantidadtextBox.Name = "CantidadtextBox";
             this.CantidadtextBox.Size = new System.Drawing.Size(48, 20);
             this.CantidadtextBox.TabIndex = 65;
+            this.CantidadtextBox.TextChanged += new System.EventHandler(this.CantidadtextBox_TextChanged);
             // 
             // PreciotextBox
             // 
@@ -284,11 +315,13 @@
             // 
             // ArticulocomboBox
             // 
+            this.ArticulocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ArticulocomboBox.FormattingEnabled = true;
             this.ArticulocomboBox.Location = new System.Drawing.Point(57, 13);
             this.ArticulocomboBox.Name = "ArticulocomboBox";
             this.ArticulocomboBox.Size = new System.Drawing.Size(134, 21);
             this.ArticulocomboBox.TabIndex = 62;
+            this.ArticulocomboBox.SelectedIndexChanged += new System.EventHandler(this.ArticulocomboBox_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -303,43 +336,50 @@
             // 
             this.Eliminarbutton.Image = global::ProyectoFinal_Rafael.Properties.Resources.delete_16;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Eliminarbutton.Location = new System.Drawing.Point(380, 497);
+            this.Eliminarbutton.Location = new System.Drawing.Point(459, 497);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(92, 37);
             this.Eliminarbutton.TabIndex = 68;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::ProyectoFinal_Rafael.Properties.Resources.save_16;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Guardarbutton.Location = new System.Drawing.Point(192, 497);
+            this.Guardarbutton.Location = new System.Drawing.Point(271, 497);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(93, 37);
             this.Guardarbutton.TabIndex = 67;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Nuevobutton
             // 
             this.Nuevobutton.Image = global::ProyectoFinal_Rafael.Properties.Resources.file_16;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Nuevobutton.Location = new System.Drawing.Point(21, 497);
+            this.Nuevobutton.Location = new System.Drawing.Point(100, 497);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(82, 37);
             this.Nuevobutton.TabIndex = 66;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
+            // 
+            // MyErrorProvider
+            // 
+            this.MyErrorProvider.ContainerControl = this;
             // 
             // rFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 546);
+            this.ClientSize = new System.Drawing.Size(669, 556);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -358,7 +398,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
             this.Venta.ResumeLayout(false);
             this.Venta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,17 +423,20 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox ArticulocomboBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TotaltextBox;
+        private System.Windows.Forms.TextBox ItbistextBox;
+        private System.Windows.Forms.TextBox SubTotaltextBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Removerbutton;
         private System.Windows.Forms.Button Agregarbutton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DetalledataGridView;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Nuevobutton;
+        private System.Windows.Forms.TextBox ImportetextBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }

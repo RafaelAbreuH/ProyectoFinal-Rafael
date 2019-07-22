@@ -210,6 +210,10 @@
       <Project>{1AD32760-92E8-487E-A085-75F2FCFC2E9C}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{BCE81376-D252-4BC4-A3EE-7A7294316BCB}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{A9C4EF19-17B7-4285-882C-2252D869B21B}</Project>
       <Name>Entidades</Name>

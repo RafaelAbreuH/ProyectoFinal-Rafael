@@ -22,12 +22,11 @@ namespace ProyectoFinal_Rafael.UI.Registros
         private void Limpiar()
         {
             IdnumericUpDown.Value = 0;
-            NombretextBox.Text = string.Empty;
+            DescripciontextBox.Text = string.Empty;
             CostotextBox.Text = string.Empty;
             PreciotextBox.Text = string.Empty;
-            ItbistextBox.Text = string.Empty;
             ExistenciatextBox.Text = string.Empty;
-            MedidatextBox.Text = string.Empty;
+            DescripciontextBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;
 
         }
@@ -44,25 +43,24 @@ namespace ProyectoFinal_Rafael.UI.Registros
         {
             Articulos articulo = new Articulos();
             articulo.ArticuloId = Convert.ToInt32(IdnumericUpDown.Value);
-            articulo.Nombre = NombretextBox.Text;
+            articulo.FechanEntrada = FechadateTimePicker.Value;
+            articulo.Descripcion = DescripciontextBox.Text;
             articulo.Costo = Convert.ToDecimal(CostotextBox.Text);
             articulo.Precio = Convert.ToDecimal(PreciotextBox.Text);
-            articulo.Itbis = Convert.ToDecimal(ItbistextBox.Text);
-            articulo.Existencia = Convert.ToDecimal(ExistenciatextBox.Text);
-            articulo.FechanEntrada = FechadateTimePicker.Value;
-
+            articulo.Existencia = 0;
+            articulo.Medida = MedidacomboBox.Text;
             return articulo;
         }
 
         private void LlenaCampo(Articulos articulo)
         {
             IdnumericUpDown.Value = articulo.ArticuloId;
-            NombretextBox.Text = articulo.Nombre;
+            DescripciontextBox.Text = articulo.Descripcion;
             CostotextBox.Text = articulo.Costo.ToString();
             PreciotextBox.Text = articulo.Precio.ToString();
-            ItbistextBox.Text = articulo.Itbis.ToString();
             ExistenciatextBox.Text = articulo.Existencia.ToString();
             FechadateTimePicker.Value = articulo.FechanEntrada;
+            MedidacomboBox.Text = articulo.Medida;
         }
 
         private bool Validar()
@@ -70,10 +68,10 @@ namespace ProyectoFinal_Rafael.UI.Registros
             bool paso = true;
             errorProvider1.Clear();
 
-            if (NombretextBox.Text == String.Empty)
+            if (DescripciontextBox.Text == String.Empty)
             {
-                errorProvider1.SetError(NombretextBox, "El campo Nombre no puede estar vacio");
-                NombretextBox.Focus();
+                errorProvider1.SetError(DescripciontextBox, "El campo Nombre no puede estar vacio");
+                DescripciontextBox.Focus();
                 paso = false;
             }
             if (CostotextBox.Text == String.Empty)
@@ -86,24 +84,6 @@ namespace ProyectoFinal_Rafael.UI.Registros
             {
                 errorProvider1.SetError(PreciotextBox, "El campo Precio no puede estar vacio");
                 PreciotextBox.Focus();
-                paso = false;
-            }
-            if (ItbistextBox.Text == String.Empty)
-            {
-                errorProvider1.SetError(ItbistextBox, "El campo Itbis no puede estar vacio");
-                ItbistextBox.Focus();
-                paso = false;
-            }
-            if (ExistenciatextBox.Text == String.Empty)
-            {
-                errorProvider1.SetError(ExistenciatextBox, "El campo Existencia no puede estar vacio");
-                ExistenciatextBox.Focus();
-                paso = false;
-            }
-            if (MedidatextBox.Text == String.Empty)
-            {
-                errorProvider1.SetError(MedidatextBox, "El campo Medida no puede estar vacio");
-                MedidatextBox.Focus();
                 paso = false;
             }
             if (FechadateTimePicker.Value > DateTime.Now)

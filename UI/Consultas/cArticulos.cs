@@ -36,8 +36,8 @@ namespace ProyectoFinal_Rafael.UI.Consultas
                         int id = Convert.ToInt32(CriteriotextBox.Text);
                         listado = db.GetList(u => u.ArticuloId == id);
                         break;
-                    case 2: //Nombre
-                        listado = db.GetList(u => u.Nombre.Contains(CriteriotextBox.Text));
+                    case 2: //Descripcion
+                        listado = db.GetList(u => u.Descripcion.Contains(CriteriotextBox.Text));
                         break;
                     case 3: // Costo
                         listado = db.GetList(u => u.Costo.ToString().Contains(CriteriotextBox.Text));

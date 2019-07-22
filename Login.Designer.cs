@@ -44,14 +44,14 @@
             this.ClavemaskedTextBox.Name = "ClavemaskedTextBox";
             this.ClavemaskedTextBox.PasswordChar = '*';
             this.ClavemaskedTextBox.Size = new System.Drawing.Size(149, 20);
-            this.ClavemaskedTextBox.TabIndex = 10;
+            this.ClavemaskedTextBox.TabIndex = 2;
             // 
             // Entrarbutton
             // 
             this.Entrarbutton.Location = new System.Drawing.Point(93, 111);
             this.Entrarbutton.Name = "Entrarbutton";
             this.Entrarbutton.Size = new System.Drawing.Size(75, 23);
-            this.Entrarbutton.TabIndex = 9;
+            this.Entrarbutton.TabIndex = 3;
             this.Entrarbutton.Text = "Entrar";
             this.Entrarbutton.UseVisualStyleBackColor = true;
             this.Entrarbutton.Click += new System.EventHandler(this.Entrarbutton_Click);
@@ -62,7 +62,7 @@
             this.label2.Location = new System.Drawing.Point(17, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 8;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Clave:";
             // 
             // label1
@@ -71,7 +71,7 @@
             this.label1.Location = new System.Drawing.Point(8, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Usuario:";
             // 
             // UsuarioTextBox
@@ -79,7 +79,7 @@
             this.UsuarioTextBox.Location = new System.Drawing.Point(77, 43);
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.Size = new System.Drawing.Size(149, 20);
-            this.UsuarioTextBox.TabIndex = 6;
+            this.UsuarioTextBox.TabIndex = 1;
             // 
             // errorProvider
             // 

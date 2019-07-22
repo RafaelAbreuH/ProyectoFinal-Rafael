@@ -22,13 +22,10 @@ namespace ProyectoFinal_Rafael.UI.Registros
         private void LlenarComboBox()
         {
 
-            RepositorioBase<Clientes> db = new RepositorioBase<Clientes>();
-            var listado = new List<Clientes>();
-            listado = db.GetList(l => true);
-            CiudadcomboBox.DataSource = listado;
-            CiudadcomboBox.DisplayMember = "Descripcion";
+            RepositorioBase<Ciudades> CRepositorio = new RepositorioBase<Ciudades>();
+            CiudadcomboBox.DataSource = CRepositorio.GetList(c => true);
             CiudadcomboBox.ValueMember = "CiudadId";
-
+            CiudadcomboBox.DisplayMember = "Descripcion";
         }
         private void Limpiar()
         {
@@ -64,9 +61,9 @@ namespace ProyectoFinal_Rafael.UI.Registros
             cliente.Cedula = CedulamaskedTextBox1.Text;
             cliente.Email = EmailtextBox.Text;
             cliente.Celular = TelefonomaskedTextBox.Text;
-            cliente.CiudadId = Convert.ToInt32(CiudadcomboBox.Text);
+            cliente.CiudadId = Convert.ToInt32(CiudadcomboBox.SelectedValue);
             cliente.FechaIngreso = FechadateTimePicker.Value;
-            cliente.Balance = Convert.ToDecimal(BalancetextBox.Text);
+            cliente.Balance = 0;
 
             return cliente; 
         }
@@ -227,6 +224,9 @@ namespace ProyectoFinal_Rafael.UI.Registros
             }
         }
 
-
+        private void CiudadcomboBox_Click(object sender, EventArgs e)
+        {
+            CiudadcomboBox.Refresh();
+        }
     }
 }
