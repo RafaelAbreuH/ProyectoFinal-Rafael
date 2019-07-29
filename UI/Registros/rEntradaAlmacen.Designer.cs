@@ -49,7 +49,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(47, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 13);
             this.label1.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             // IdnumericUpDown
             // 
-            this.IdnumericUpDown.Location = new System.Drawing.Point(40, 11);
+            this.IdnumericUpDown.Location = new System.Drawing.Point(74, 11);
             this.IdnumericUpDown.Name = "IdnumericUpDown";
             this.IdnumericUpDown.Size = new System.Drawing.Size(70, 20);
             this.IdnumericUpDown.TabIndex = 2;
@@ -65,7 +65,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 82);
+            this.label2.Location = new System.Drawing.Point(47, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 38;
@@ -75,7 +75,7 @@
             // 
             this.ArticulocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ArticulocomboBox.FormattingEnabled = true;
-            this.ArticulocomboBox.Location = new System.Drawing.Point(64, 74);
+            this.ArticulocomboBox.Location = new System.Drawing.Point(98, 74);
             this.ArticulocomboBox.Name = "ArticulocomboBox";
             this.ArticulocomboBox.Size = new System.Drawing.Size(119, 21);
             this.ArticulocomboBox.TabIndex = 39;
@@ -83,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 114);
+            this.label3.Location = new System.Drawing.Point(47, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 40;
@@ -91,7 +91,7 @@
             // 
             // CantidadtextBox
             // 
-            this.CantidadtextBox.Location = new System.Drawing.Point(72, 109);
+            this.CantidadtextBox.Location = new System.Drawing.Point(106, 109);
             this.CantidadtextBox.Name = "CantidadtextBox";
             this.CantidadtextBox.Size = new System.Drawing.Size(111, 20);
             this.CantidadtextBox.TabIndex = 41;
@@ -144,7 +144,7 @@
             // 
             this.Buscarbutton.Image = global::ProyectoFinal_Rafael.Properties.Resources.search_13_16;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(116, 8);
+            this.Buscarbutton.Location = new System.Drawing.Point(150, 8);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(67, 23);
             this.Buscarbutton.TabIndex = 37;
@@ -157,7 +157,7 @@
             // 
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(71, 43);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(105, 43);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(112, 20);
             this.FechadateTimePicker.TabIndex = 55;
@@ -165,7 +165,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 49);
+            this.label7.Location = new System.Drawing.Point(47, 49);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 54;

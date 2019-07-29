@@ -146,7 +146,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(280, 14);
+            this.label7.Location = new System.Drawing.Point(299, 14);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 58;
@@ -295,6 +295,7 @@
             this.CantidadtextBox.Size = new System.Drawing.Size(48, 20);
             this.CantidadtextBox.TabIndex = 65;
             this.CantidadtextBox.TextChanged += new System.EventHandler(this.CantidadtextBox_TextChanged);
+            this.CantidadtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadtextBox_KeyPress);
             // 
             // PreciotextBox
             // 

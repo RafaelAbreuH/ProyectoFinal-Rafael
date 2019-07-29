@@ -275,7 +275,11 @@ namespace ProyectoFinal_Rafael.UI.Registros
 
                 DetalledataGridView.DataSource = null;
                 DetalledataGridView.DataSource = detalle;
-
+                DetalledataGridView.Columns["Id"].Visible = false;
+                DetalledataGridView.Columns["ArticuloId"].Visible = false;
+                DetalledataGridView.Columns["FacturaId"].Visible = false;
+                DetalledataGridView.Columns["Articulo"].Visible = false;
+                DetalledataGridView.Columns["Factura"].Visible = false;
                 Rebajar();
             }
         }
@@ -408,11 +412,29 @@ namespace ProyectoFinal_Rafael.UI.Registros
             precio = ToDecimal(PreciotextBox.Text);
             ImportetextBox.Text = repositorio.Importe(cantidad, precio).ToString();
         }
+        public void soloNumeros(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsNumber(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception)
+            {
 
+            }
+        }
         private void CantidadtextBox_TextChanged(object sender, EventArgs e)
         {
             LlenarPrecio();
             LlenarImporte();
+
         }
 
         private void ArticulocomboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -423,6 +445,12 @@ namespace ProyectoFinal_Rafael.UI.Registros
                 LlenarImporte();
             }
             LlenarPrecio();
+        }
+
+        private void CantidadtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumeros(e);
+
         }
     }
 }

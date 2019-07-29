@@ -51,10 +51,10 @@ namespace ProyectoFinal_Rafael
                 MessageBox.Show("Campos Vacios!!");
                 return;
             }
-            if ((UsuarioTextBox.Text == "Admin") && (ClavemaskedTextBox.Text == "0000"))
+            if ((UsuarioTextBox.Text == "Admin") && (ClavemaskedTextBox.Text == "0"))
             {
                 this.Hide();
-                MainForm ver = new MainForm();
+                Farmacia ver = new Farmacia();
                 ver.Show();
             }
             else
@@ -65,7 +65,7 @@ namespace ProyectoFinal_Rafael
                 if (user.Exists(x => x.Nombre == UsuarioTextBox.Text) && user.Exists(x => x.Clave == ClavemaskedTextBox.Text))
                 {
                     this.Hide();
-                    MainForm ver = new MainForm();
+                    Farmacia ver = new Farmacia();
                     ver.Show();
                 }
                 else

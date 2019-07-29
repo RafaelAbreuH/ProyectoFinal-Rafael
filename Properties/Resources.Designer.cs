@@ -73,6 +73,16 @@ namespace ProyectoFinal_Rafael.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FARMACIA_LOGO {
+            get {
+                object obj = ResourceManager.GetObject("FARMACIA-LOGO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap file_16 {
             get {
                 object obj = ResourceManager.GetObject("file-16", resourceCulture);

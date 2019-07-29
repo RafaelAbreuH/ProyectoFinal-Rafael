@@ -1,4 +1,5 @@
-﻿using ProyectoFinal_Rafael.UI.Registros;
+﻿using ProyectoFinal_Rafael.UI.Consultas;
+using ProyectoFinal_Rafael.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_Rafael
 {
-    public partial class MainForm : Form
+    public partial class Farmacia : Form
     {
-        public MainForm()
+        public Farmacia()
         {
             InitializeComponent();
         }
@@ -58,6 +59,35 @@ namespace ProyectoFinal_Rafael
             rFacturacion ver = new rFacturacion();
             ver.MdiParent = this;
             ver.Show();
+        }
+
+        private void ClientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cClientes ver = new cClientes();
+            ver.MdiParent = this;
+            ver.Show();
+        }
+
+        private void EntradaAlmacenToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cEntradaAlmacen ver = new cEntradaAlmacen();
+            ver.MdiParent = this;
+            ver.Show();
+        }
+
+        private void FacturarionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void UsuariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ArticulosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
